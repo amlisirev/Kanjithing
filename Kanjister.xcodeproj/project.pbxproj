@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74407EB0194FABC500EE7BAA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74407EAF194FABC500EE7BAA /* AVFoundation.framework */; };
 		7442B599194BB61900DA5F22 /* scribbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7442B598194BB61900DA5F22 /* scribbleView.m */; };
 		74727E071949D07C0070A230 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74727E061949D07C0070A230 /* Foundation.framework */; };
 		74727E091949D07C0070A230 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74727E081949D07C0070A230 /* CoreGraphics.framework */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74407EAF194FABC500EE7BAA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7442B597194BB61900DA5F22 /* scribbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scribbleView.h; sourceTree = "<group>"; };
 		7442B598194BB61900DA5F22 /* scribbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scribbleView.m; sourceTree = "<group>"; };
 		74727E031949D07C0070A230 /* Kanjister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kanjister.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74407EB0194FABC500EE7BAA /* AVFoundation.framework in Frameworks */,
 				747576D0194A35A4007029A5 /* liblept.a in Frameworks */,
 				74727E091949D07C0070A230 /* CoreGraphics.framework in Frameworks */,
 				747576D1194A35A4007029A5 /* libtesseract_all.a in Frameworks */,
@@ -270,6 +273,7 @@
 		74727E051949D07C0070A230 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74407EAF194FABC500EE7BAA /* AVFoundation.framework */,
 				74727E061949D07C0070A230 /* Foundation.framework */,
 				74727E081949D07C0070A230 /* CoreGraphics.framework */,
 				74727E0A1949D07C0070A230 /* UIKit.framework */,

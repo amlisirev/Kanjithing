@@ -48,4 +48,11 @@
 - (IBAction)imageClear:(id)sender {
     self.mainImage.image = nil;
 }
+- (IBAction)speakText:(id)sender {
+    AVSpeechSynthesisVoice *voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"ja-JP"];
+    AVSpeechUtterance *text = [AVSpeechUtterance speechUtteranceWithString:self.translatedText.text];
+    text.voice = voice;
+    AVSpeechSynthesizer *speaker = [AVSpeechSynthesizer alloc];
+    [speaker speakUtterance:text];
+}
 @end
