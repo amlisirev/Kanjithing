@@ -1,0 +1,21 @@
+//
+//  scribbleView.h
+//  Kanjister
+//
+//  Created by Sakari Ikonen on 14/06/14.
+//  Copyright (c) 2014 Sakari Ikonen. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+@class scribbleView;
+@protocol scribbleViewDelegate <NSObject>
+
+-(void)mainImageDidChange;
+
+@end
+
+@interface scribbleView : UIView
+@property (nonatomic, retain) UIImage *image;
+@property (weak) id <scribbleViewDelegate> delegate;
+
+@end
