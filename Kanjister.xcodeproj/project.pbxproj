@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		74407EB0194FABC500EE7BAA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74407EAF194FABC500EE7BAA /* AVFoundation.framework */; };
 		7442B599194BB61900DA5F22 /* scribbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7442B598194BB61900DA5F22 /* scribbleView.m */; };
+		74680B5F195078AF00362ECA /* TextSpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 74680B5E195078AF00362ECA /* TextSpeaker.m */; };
+		74680B6219508FCC00362ECA /* TextRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 74680B6119508FCC00362ECA /* TextRecognizer.m */; };
 		74727E071949D07C0070A230 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74727E061949D07C0070A230 /* Foundation.framework */; };
 		74727E091949D07C0070A230 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74727E081949D07C0070A230 /* CoreGraphics.framework */; };
 		74727E0B1949D07C0070A230 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74727E0A1949D07C0070A230 /* UIKit.framework */; };
@@ -48,6 +50,10 @@
 		74407EAF194FABC500EE7BAA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7442B597194BB61900DA5F22 /* scribbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scribbleView.h; sourceTree = "<group>"; };
 		7442B598194BB61900DA5F22 /* scribbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scribbleView.m; sourceTree = "<group>"; };
+		74680B5D195078AF00362ECA /* TextSpeaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextSpeaker.h; path = ../TextSpeaker.h; sourceTree = "<group>"; };
+		74680B5E195078AF00362ECA /* TextSpeaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextSpeaker.m; path = ../TextSpeaker.m; sourceTree = "<group>"; };
+		74680B6019508FCC00362ECA /* TextRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextRecognizer.h; sourceTree = "<group>"; };
+		74680B6119508FCC00362ECA /* TextRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextRecognizer.m; sourceTree = "<group>"; };
 		74727E031949D07C0070A230 /* Kanjister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kanjister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74727E061949D07C0070A230 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		74727E081949D07C0070A230 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -249,6 +255,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74680B5C1950731300362ECA /* userdata */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = userdata;
+			sourceTree = "<group>";
+		};
 		74727DFA1949D07C0070A230 = {
 			isa = PBXGroup;
 			children = (
@@ -285,8 +298,13 @@
 		74727E0C1949D07C0070A230 /* Kanjister */ = {
 			isa = PBXGroup;
 			children = (
+				74680B5C1950731300362ECA /* userdata */,
 				74727E181949D07C0070A230 /* Main_iPhone.storyboard */,
 				74727E1B1949D07C0070A230 /* Main_iPad.storyboard */,
+				74680B5E195078AF00362ECA /* TextSpeaker.m */,
+				74680B5D195078AF00362ECA /* TextSpeaker.h */,
+				74680B6119508FCC00362ECA /* TextRecognizer.m */,
+				74680B6019508FCC00362ECA /* TextRecognizer.h */,
 				74727E1E1949D07C0070A230 /* DrawViewController.h */,
 				74727E1F1949D07C0070A230 /* DrawViewController.m */,
 				7442B597194BB61900DA5F22 /* scribbleView.h */,
@@ -638,11 +656,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74680B5F195078AF00362ECA /* TextSpeaker.m in Sources */,
 				74727E201949D07C0070A230 /* DrawViewController.m in Sources */,
 				7442B599194BB61900DA5F22 /* scribbleView.m in Sources */,
 				74727E171949D07C0070A230 /* AppDelegate.m in Sources */,
 				747576CC194A35A4007029A5 /* Tesseract.mm in Sources */,
 				74727E131949D07C0070A230 /* main.m in Sources */,
+				74680B6219508FCC00362ECA /* TextRecognizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

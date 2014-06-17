@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DrawViewController.h
 //  Kanjister
 //
 //  Created by Sakari Ikonen on 12/06/14.
@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-@import AVFoundation;
 #import "scribbleView.h"
 
 @interface DrawViewController : UIViewController <scribbleViewDelegate> {
