@@ -34,6 +34,8 @@
 		747576D1194A35A4007029A5 /* libtesseract_all.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 747576CA194A35A4007029A5 /* libtesseract_all.a */; };
 		747576D2194A35A4007029A5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 747576CB194A35A4007029A5 /* README.md */; };
 		747576D4194A35BC007029A5 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 747576D3194A35BC007029A5 /* tessdata */; };
+		74C308D219523621007E1DA8 /* CharacterCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C308D119523621007E1DA8 /* CharacterCollection.m */; };
+		74C308D519523768007E1DA8 /* DefaultCharacters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74C308D419523768007E1DA8 /* DefaultCharacters.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -226,6 +228,9 @@
 		747576CA194A35A4007029A5 /* libtesseract_all.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtesseract_all.a; sourceTree = "<group>"; };
 		747576CB194A35A4007029A5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		747576D3194A35BC007029A5 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = Kanjister/tessdata; sourceTree = SOURCE_ROOT; };
+		74C308D019523621007E1DA8 /* CharacterCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CharacterCollection.h; path = ../CharacterCollection.h; sourceTree = "<group>"; };
+		74C308D119523621007E1DA8 /* CharacterCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CharacterCollection.m; path = ../CharacterCollection.m; sourceTree = "<group>"; };
+		74C308D419523768007E1DA8 /* DefaultCharacters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultCharacters.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,14 +306,12 @@
 				74680B5C1950731300362ECA /* userdata */,
 				74727E181949D07C0070A230 /* Main_iPhone.storyboard */,
 				74727E1B1949D07C0070A230 /* Main_iPad.storyboard */,
-				74680B5E195078AF00362ECA /* TextSpeaker.m */,
-				74680B5D195078AF00362ECA /* TextSpeaker.h */,
-				74680B6119508FCC00362ECA /* TextRecognizer.m */,
-				74680B6019508FCC00362ECA /* TextRecognizer.h */,
+				74C308D3195236DC007E1DA8 /* Model */,
 				74727E1E1949D07C0070A230 /* DrawViewController.h */,
 				74727E1F1949D07C0070A230 /* DrawViewController.m */,
 				7442B597194BB61900DA5F22 /* scribbleView.h */,
 				7442B598194BB61900DA5F22 /* scribbleView.m */,
+				74C308D419523768007E1DA8 /* DefaultCharacters.plist */,
 				74727E211949D07C0070A230 /* Images.xcassets */,
 				74727E0D1949D07C0070A230 /* Supporting Files */,
 			);
@@ -553,6 +556,19 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		74C308D3195236DC007E1DA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				74C308D119523621007E1DA8 /* CharacterCollection.m */,
+				74C308D019523621007E1DA8 /* CharacterCollection.h */,
+				74680B5E195078AF00362ECA /* TextSpeaker.m */,
+				74680B5D195078AF00362ECA /* TextSpeaker.h */,
+				74680B6119508FCC00362ECA /* TextRecognizer.m */,
+				74680B6019508FCC00362ECA /* TextRecognizer.h */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -635,6 +651,7 @@
 				74727E1D1949D07C0070A230 /* Main_iPad.storyboard in Resources */,
 				74727E221949D07C0070A230 /* Images.xcassets in Resources */,
 				74727E1A1949D07C0070A230 /* Main_iPhone.storyboard in Resources */,
+				74C308D519523768007E1DA8 /* DefaultCharacters.plist in Resources */,
 				74727E111949D07C0070A230 /* InfoPlist.strings in Resources */,
 				747576D2194A35A4007029A5 /* README.md in Resources */,
 				747576CD194A35A4007029A5 /* LICENSE in Resources */,
@@ -657,6 +674,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74680B5F195078AF00362ECA /* TextSpeaker.m in Sources */,
+				74C308D219523621007E1DA8 /* CharacterCollection.m in Sources */,
 				74727E201949D07C0070A230 /* DrawViewController.m in Sources */,
 				7442B599194BB61900DA5F22 /* scribbleView.m in Sources */,
 				74727E171949D07C0070A230 /* AppDelegate.m in Sources */,

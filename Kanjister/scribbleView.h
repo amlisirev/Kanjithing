@@ -16,6 +16,7 @@
 
 @interface scribbleView : UIView
 @property (nonatomic, retain) UIImage *image;
+@property (nonatomic, retain) UIImage *background;
 @property (weak) id <scribbleViewDelegate> delegate;
 
 @end

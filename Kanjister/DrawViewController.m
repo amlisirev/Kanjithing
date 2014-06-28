@@ -10,6 +10,7 @@
 #import "Tesseract.h"
 #import "TextSpeaker.h"
 #import "TextRecognizer.h"
+#import "CharacterCollection.h"
 
 @interface DrawViewController ()
 
@@ -17,17 +18,16 @@
 
 @implementation DrawViewController
 {
-    uint currentcharidx;
     uint repetitions;
-    NSArray *hiragana;
+    CharacterCollection *hiragana;
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.mainImage.delegate = self;
-    hiragana = [NSArray arrayWithObjects:@"あ", @"え", @"い", @"お", @"う", @"や", @"ゆ", @"よ", @"か", @"け", nil];
-    currentcharidx = 0;
+    hiragana = [[CharacterCollection alloc] initWithCoder:nil];
+    [self updateCurrentChar];
 }
 
 
@@ -39,7 +39,7 @@
 
 - (void)translateImage:(UIImage *)image {
     TextRecognizer *recon = [[TextRecognizer alloc] initWithLanguage:@"jpn"
-                                                    andCharacterList:hiragana[currentcharidx]];
+                                                    andCharacterList:[hiragana currentCharacter]];
     NSString *text = [recon recognizeText:image];
     [self isTextMatching:text];
     NSLog(@"%d, %@", text.length, text);
@@ -51,14 +51,16 @@
      [self translateImage:self.mainImage.image];
     }
 }
+
 -(void)isTextMatching:(NSString *)text
 {
-    if ([text isEqualToString:hiragana[currentcharidx]]) {
+    if ([text isEqualToString:[hiragana currentCharacter]]) {
         self.translatedText.text = @"correct!";
         NSLog(@"YESSSSSSSS SLITHERIN");
         if (repetitions > 2 ) {
-            currentcharidx++;
+            [hiragana next];
             repetitions = 0;
+            [self updateCurrentChar];
         } else {
             repetitions++;
         }
@@ -72,6 +74,16 @@
 }
 - (IBAction)speakText:(id)sender {
     TextSpeaker *speaker = [[TextSpeaker alloc] initWithLanguage:@"ja-JP"];
-    [speaker speakText:hiragana[currentcharidx]];
+    [speaker speakText:[hiragana currentCharacter]];
 }
+-(void)updateCurrentChar {
+    self.currentChar.text = [hiragana romaji];
+    [self.speakTextButton setTitle:[hiragana currentCharacter] forState:UIControlStateNormal];
+}
+
+- (IBAction)skipCharacter:(id)sender {
+    [hiragana next];
+    [self updateCurrentChar];
+}
+
 @end

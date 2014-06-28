@@ -24,6 +24,7 @@
     if (self) {
         self.image = nil;
         self.delegate = nil;
+        self.background = nil;
         [self setMultipleTouchEnabled:NO];
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(eraseDrawing:)];
         tap.numberOfTapsRequired = 2;
@@ -81,6 +82,7 @@
 - (void)drawRect:(CGRect)rect
 {
     [cachedImage drawInRect:rect];
+    [self.background drawInRect:rect blendMode:kCGBlendModeOverlay alpha:0.8];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event

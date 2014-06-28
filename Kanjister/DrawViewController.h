@@ -15,5 +15,7 @@
 - (IBAction)imageClear:(id)sender;
 @property (weak, nonatomic) IBOutlet scribbleView *mainImage;
 @property (weak, nonatomic) IBOutlet UILabel *translatedText;
+@property (weak, nonatomic) IBOutlet UILabel *currentChar;
+@property (weak, nonatomic) IBOutlet UIButton *speakTextButton;
 
 @end
