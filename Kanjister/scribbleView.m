@@ -15,6 +15,9 @@
     UIImage *cachedImage;
     uint counter;
     CGPoint points[5];
+    CGPoint pointsBuffer[100];
+    uint bufferIndex;
+    dispatch_queue_t drawingQueue;
 }
 @synthesize delegate = _delegate;
 
@@ -29,10 +32,7 @@
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(eraseDrawing:)];
         tap.numberOfTapsRequired = 2;
         [self addGestureRecognizer:tap];
-        
-        path = [UIBezierPath bezierPath];
-        [path setLineWidth:10.0];
-        
+        drawingQueue = dispatch_queue_create("drawingQueue", NULL);
     }
     return self;
 }
@@ -46,6 +46,7 @@
 {
     UITouch *touch = [touches anyObject];
     counter = 0;
+    bufferIndex = 0;
     points[0] = [touch locationInView:self];
 }
 
@@ -57,22 +58,36 @@
     if (counter==4)
     {
         points[3] = CGPointMake((points[2].x + points[4].x)/2.0, (points[2].y + points[4].y)/2.0);
-        [path moveToPoint:points[0]];
-        [path addCurveToPoint:points[3] controlPoint1:points[1] controlPoint2:points[2]];
-        UIGraphicsBeginImageContextWithOptions(self.bounds.size, YES, 0.0);
-        if (!cachedImage)
-        {
-            UIBezierPath *rectpath = [UIBezierPath bezierPathWithRect:self.bounds];
-            [[UIColor whiteColor] setFill];
-            [rectpath fill];
-        }
-        [cachedImage drawAtPoint:CGPointZero];
-        [[UIColor blackColor] setStroke];
-        [path stroke];
-        cachedImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        [self setNeedsDisplay];
-        [path removeAllPoints];
+        pointsBuffer[bufferIndex] = points[0];
+        pointsBuffer[bufferIndex + 1] = points[1];
+        pointsBuffer[bufferIndex + 2] = points[2];
+        pointsBuffer[bufferIndex + 3] = points[3];
+        bufferIndex +=4;
+        dispatch_async(drawingQueue, ^{
+            if (bufferIndex == 0) return;
+            path = [UIBezierPath bezierPath];
+            for ( int i = 0; i < bufferIndex; i += 4)
+            {
+                [path moveToPoint:pointsBuffer[i]];
+                [path addCurveToPoint:pointsBuffer[i+3] controlPoint1:pointsBuffer[i+1] controlPoint2:pointsBuffer[i+2]];
+            }
+            UIGraphicsBeginImageContextWithOptions(self.bounds.size, YES, 0.0);
+            if (!cachedImage)
+            {
+                UIBezierPath *rectpath = [UIBezierPath bezierPathWithRect:self.bounds];
+                [[UIColor whiteColor] setFill];
+                [rectpath fill];
+            }
+            [cachedImage drawAtPoint:CGPointZero];
+            [[UIColor blackColor] setStroke];
+            [path setLineWidth:10.0];
+            [path stroke];
+            cachedImage = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self setNeedsDisplay];
+            });
+        });
         points[0] = points[3];
         points[1] = points[4];
         counter = 1;
@@ -82,7 +97,7 @@
 - (void)drawRect:(CGRect)rect
 {
     [cachedImage drawInRect:rect];
-    [self.background drawInRect:rect blendMode:kCGBlendModeOverlay alpha:0.8];
+    // [self.background drawInRect:rect blendMode:kCGBlendModeOverlay alpha:0.8];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event

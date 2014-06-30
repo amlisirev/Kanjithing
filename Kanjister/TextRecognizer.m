@@ -31,7 +31,7 @@
     Tesseract *tesseract = [[Tesseract alloc] initWithDataPath:@"tessdata" language:_language];
     [tesseract setImage:image];
     [tesseract setVariableValue:_characters forKey:@"tessedit_char_whitelist"];
-    [tesseract setVariableValue:@" " forKey:@"tessedit_char_blacklist"];
+    [tesseract setVariableValue:@"FALSE" forKey:@"force_word_assoc"];
     [tesseract recognize];
     self.translatedText = [[tesseract recognizedText] stringByReplacingOccurrencesOfString:@"\n" withString:@""]; //had to remove whitespace because tesseract is an asshole.
     [tesseract clear];
