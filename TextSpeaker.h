@@ -13,6 +13,9 @@
 
 -(void)speakText:(NSString *)text;
 -(id)initWithLanguage:(NSString *)language;
+-(void)playSound:(NSString *)soundname;
+@property (nonatomic, retain) AVAudioPlayer *player;
+
 
 @end
 

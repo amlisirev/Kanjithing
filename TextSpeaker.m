@@ -12,7 +12,7 @@
 {
     NSString *_lang;
 }
-
+@synthesize player;
 
 -(id)initWithLanguage:(NSString *)language
 {
@@ -23,6 +23,7 @@
     return self;
 }
 
+
 -(void)speakText:(NSString *)text
 {
     AVSpeechSynthesisVoice *voice = [AVSpeechSynthesisVoice voiceWithLanguage:_lang];
@@ -30,6 +31,17 @@
     utterance.voice = voice;
     AVSpeechSynthesizer *speaker = [AVSpeechSynthesizer alloc];
     [speaker speakUtterance:utterance];
+}
+
+-(void)playSound:(NSString *)soundname {
+    NSString *bundlepath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"audioclips"];
+    NSString *soundpath = [bundlepath stringByAppendingPathComponent:soundname];
+    NSLog(@"%@", soundpath);
+    if (soundpath) {
+        NSURL *soundURL = [NSURL fileURLWithPath:soundpath];
+        player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+        [player play];
+    }
 }
 
 @end

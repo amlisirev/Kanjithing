@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74228AF41963013A002CC471 /* audioclips in Resources */ = {isa = PBXBuildFile; fileRef = 74228AF31963013A002CC471 /* audioclips */; };
 		74407EB0194FABC500EE7BAA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74407EAF194FABC500EE7BAA /* AVFoundation.framework */; };
 		7442B599194BB61900DA5F22 /* scribbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7442B598194BB61900DA5F22 /* scribbleView.m */; };
 		74680B5F195078AF00362ECA /* TextSpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 74680B5E195078AF00362ECA /* TextSpeaker.m */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74228AF31963013A002CC471 /* audioclips */ = {isa = PBXFileReference; lastKnownFileType = folder; name = audioclips; path = Kanjister/audioclips; sourceTree = "<group>"; };
 		74407EAF194FABC500EE7BAA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7442B597194BB61900DA5F22 /* scribbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scribbleView.h; sourceTree = "<group>"; };
 		7442B598194BB61900DA5F22 /* scribbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scribbleView.m; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 		74727DFA1949D07C0070A230 = {
 			isa = PBXGroup;
 			children = (
+				74228AF31963013A002CC471 /* audioclips */,
 				747576D3194A35BC007029A5 /* tessdata */,
 				7475762E194A35A4007029A5 /* tesseract-ios */,
 				74727E0C1949D07C0070A230 /* Kanjister */,
@@ -655,6 +658,7 @@
 				74727E111949D07C0070A230 /* InfoPlist.strings in Resources */,
 				747576D2194A35A4007029A5 /* README.md in Resources */,
 				747576CD194A35A4007029A5 /* LICENSE in Resources */,
+				74228AF41963013A002CC471 /* audioclips in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

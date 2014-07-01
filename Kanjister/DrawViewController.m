@@ -20,6 +20,7 @@
     uint repetitions;
     CharacterCollection *character;
     BOOL recent_eval;
+    TextSpeaker *speaker;
 }
 - (void)viewDidLoad
 {
@@ -27,7 +28,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.mainImage.delegate = self;
     recent_eval=YES;
-    character = [[CharacterCollection alloc] initWithCoder:nil];
+    speaker = [[TextSpeaker alloc] initWithLanguage:@"ja-JP"];    character = [[CharacterCollection alloc] initWithCoder:nil];
     [self updateCurrentChar];
 }
 
@@ -53,9 +54,12 @@
             recent_eval = YES;
             if (repetitions > 2) {
                 [character next];
+                [speaker playSound:@"complete.wav"];
                 [self updateCurrentChar];
                 repetitions = 0;
             } else {
+                [speaker playSound:@"success.wav"];
+
                 repetitions++;
             }
         } else {
@@ -82,7 +86,6 @@
 }
 
 - (IBAction)speakText:(id)sender {
-    TextSpeaker *speaker = [[TextSpeaker alloc] initWithLanguage:@"ja-JP"];
     [speaker speakText:[character currentCharacter]];
 }
 -(void)updateCurrentChar {
