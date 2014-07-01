@@ -14,6 +14,7 @@
     NSArray *hiragana;
     NSArray *katakana;
     NSArray *romaji;
+    NSArray *repetitions;
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
@@ -27,6 +28,13 @@
 }
 
 -(void)encodeWithCoder:(NSCoder *)aCoder {
+    
+}
+
+-(NSInteger)repetitions{
+    return 0;
+}
+-(void)upRepetitions {
     
 }
 

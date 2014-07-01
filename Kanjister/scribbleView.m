@@ -11,6 +11,7 @@
 
 @implementation scribbleView
 {
+    NSInteger strokes;
     UIBezierPath *path;
     UIImage *cachedImage;
     uint counter;
@@ -26,6 +27,7 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         self.image = nil;
+        strokes = 0;
         self.delegate = nil;
         self.background = nil;
         [self setMultipleTouchEnabled:NO];
@@ -45,6 +47,7 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
+    strokes++;
     counter = 0;
     bufferIndex = 0;
     points[0] = [touch locationInView:self];
@@ -85,6 +88,7 @@
             cachedImage = UIGraphicsGetImageFromCurrentImageContext();
             UIGraphicsEndImageContext();
             dispatch_async(dispatch_get_main_queue(), ^{
+                bufferIndex=0;
                 [self setNeedsDisplay];
             });
         });
@@ -117,9 +121,13 @@
 }
 -(void)setImage:(UIImage *)image
 {
+    strokes=0;
     cachedImage = image;
     [self setNeedsDisplay];
     [self.delegate mainImageDidChange];
+}
+-(NSInteger)strokes {
+    return strokes;
 }
 
 @end

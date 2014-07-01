@@ -19,4 +19,5 @@
 @property (nonatomic, retain) UIImage *background;
 @property (weak) id <scribbleViewDelegate> delegate;
 
+-(NSInteger)strokes;
 @end

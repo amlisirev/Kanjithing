@@ -7,7 +7,6 @@
 //
 
 #import "DrawViewController.h"
-#import "Tesseract.h"
 #import "TextSpeaker.h"
 #import "TextRecognizer.h"
 #import "CharacterCollection.h"
@@ -19,14 +18,16 @@
 @implementation DrawViewController
 {
     uint repetitions;
-    CharacterCollection *characters;
+    CharacterCollection *character;
+    BOOL recent_eval;
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.mainImage.delegate = self;
-    characters = [[CharacterCollection alloc] initWithCoder:nil];
+    recent_eval=YES;
+    character = [[CharacterCollection alloc] initWithCoder:nil];
     [self updateCurrentChar];
 }
 
@@ -37,53 +38,63 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)translateImage:(UIImage *)image {
+-(void)mainImageDidChange
+{
+    recent_eval = NO;
+    [self evaluateResult];
+}
+
+-(void)evaluateResult {
+    if (recent_eval) return;
+    if (self.mainImage.image) {
+        NSString *text = [self translateImage:self.mainImage.image];
+        if ([self isTextMatching:text], self.mainImage.strokes==3) {
+            self.translatedText.text = @"correct!";
+            recent_eval = YES;
+            if (repetitions > 2) {
+                [character next];
+                [self updateCurrentChar];
+                repetitions = 0;
+            } else {
+                repetitions++;
+            }
+        } else {
+            return;
+        }
+    }
+}
+
+-(BOOL)isTextMatching:(NSString *)text
+{
+    if ([text isEqualToString:[character currentCharacter]]) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+- (NSString *)translateImage:(UIImage *)image {
     TextRecognizer *recon = [[TextRecognizer alloc] initWithLanguage:@"jpn"
-                                                    andCharacterList:[characters currentCharacter]];
+                                                    andCharacterList:[character currentCharacter]];
     NSString *text = [recon recognizeText:image];
-    [self isTextMatching:text];
+    return text;
     NSLog(@"%d, %@", text.length, text);
 }
 
--(void)mainImageDidChange
-{
-    if (self.mainImage.image) {
-     [self translateImage:self.mainImage.image];
-    }
-}
-
--(void)isTextMatching:(NSString *)text
-{
-    if ([text isEqualToString:[characters currentCharacter]]) {
-        self.translatedText.text = @"correct!";
-        NSLog(@"YESSSSSSSS SLITHERIN");
-        if (repetitions > 2 ) {
-            [characters next];
-            repetitions = 0;
-            [self updateCurrentChar];
-        } else {
-            repetitions++;
-        }
-    } else {
-        self.translatedText.text = nil;
-    }
-}
-
-- (IBAction)imageClear:(id)sender {
-    self.mainImage.image = nil;
-}
 - (IBAction)speakText:(id)sender {
     TextSpeaker *speaker = [[TextSpeaker alloc] initWithLanguage:@"ja-JP"];
-    [speaker speakText:[characters currentCharacter]];
+    [speaker speakText:[character currentCharacter]];
 }
 -(void)updateCurrentChar {
-    self.currentChar.text = [characters romaji];
-    [self.speakTextButton setTitle:[characters currentCharacter] forState:UIControlStateNormal];
+    self.currentChar.text = [character romaji];
+    [self.speakTextButton setTitle:[character currentCharacter] forState:UIControlStateNormal];
 }
 
 - (IBAction)skipCharacter:(id)sender {
-    [characters next];
+    [character next];
     [self updateCurrentChar];
 }
-
+- (IBAction)imageClear:(id)sender {
+    self.mainImage.image = nil;
+}
 @end
