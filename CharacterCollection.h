@@ -14,6 +14,7 @@
 -(void)previous;
 -(NSString *)currentCharacter;
 -(NSString *)romaji;
--(NSInteger)repetitions;
+-(NSInteger)currentCharRepetitions;
+-(NSInteger)currentCharStrokes;
 -(void)upRepetitions;
 @end

@@ -28,7 +28,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.mainImage.delegate = self;
     recent_eval=YES;
-    speaker = [[TextSpeaker alloc] initWithLanguage:@"ja-JP"];    character = [[CharacterCollection alloc] initWithCoder:nil];
+    speaker = [[TextSpeaker alloc] initWithLanguage:@"ja-JP"];
+    character = [[CharacterCollection alloc] initWithCoder:nil];
     [self updateCurrentChar];
 }
 
@@ -49,7 +50,7 @@
     if (recent_eval) return;
     if (self.mainImage.image) {
         NSString *text = [self translateImage:self.mainImage.image];
-        if ([self isTextMatching:text], self.mainImage.strokes==3) {
+        if ([self isTextMatching:text] && self.mainImage.strokes==character.currentCharStrokes) {
             self.translatedText.text = @"correct!";
             recent_eval = YES;
             if (repetitions > 2) {
