@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		741C9246196AC0CA00F589D0 /* StrokeCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 741C9245196AC0CA00F589D0 /* StrokeCollection.m */; };
 		74228AF41963013A002CC471 /* audioclips in Resources */ = {isa = PBXBuildFile; fileRef = 74228AF31963013A002CC471 /* audioclips */; };
 		74407EB0194FABC500EE7BAA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74407EAF194FABC500EE7BAA /* AVFoundation.framework */; };
 		7442B599194BB61900DA5F22 /* scribbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7442B598194BB61900DA5F22 /* scribbleView.m */; };
@@ -51,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		741C9244196AC0CA00F589D0 /* StrokeCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StrokeCollection.h; path = ../StrokeCollection.h; sourceTree = "<group>"; };
+		741C9245196AC0CA00F589D0 /* StrokeCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StrokeCollection.m; path = ../StrokeCollection.m; sourceTree = "<group>"; };
 		74228AF31963013A002CC471 /* audioclips */ = {isa = PBXFileReference; lastKnownFileType = folder; name = audioclips; path = Kanjister/audioclips; sourceTree = "<group>"; };
 		74407EAF194FABC500EE7BAA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7442B597194BB61900DA5F22 /* scribbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scribbleView.h; sourceTree = "<group>"; };
@@ -565,6 +568,8 @@
 		74C308D3195236DC007E1DA8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				741C9244196AC0CA00F589D0 /* StrokeCollection.h */,
+				741C9245196AC0CA00F589D0 /* StrokeCollection.m */,
 				74C308D119523621007E1DA8 /* CharacterCollection.m */,
 				74C308D019523621007E1DA8 /* CharacterCollection.h */,
 				74680B5E195078AF00362ECA /* TextSpeaker.m */,
@@ -685,6 +690,7 @@
 				74C308D219523621007E1DA8 /* CharacterCollection.m in Sources */,
 				74727E201949D07C0070A230 /* DrawViewController.m in Sources */,
 				7442B599194BB61900DA5F22 /* scribbleView.m in Sources */,
+				741C9246196AC0CA00F589D0 /* StrokeCollection.m in Sources */,
 				74727E171949D07C0070A230 /* AppDelegate.m in Sources */,
 				747576CC194A35A4007029A5 /* Tesseract.mm in Sources */,
 				74727E131949D07C0070A230 /* main.m in Sources */,

@@ -7,11 +7,12 @@
 //
 
 #import "scribbleView.h"
+#import "StrokeCollection.h"
 
 
 @implementation scribbleView
 {
-    NSInteger strokes;
+    StrokeCollection *strokes;
     UIBezierPath *path;
     UIImage *cachedImage;
     uint counter;
@@ -27,9 +28,9 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         self.image = nil;
-        strokes = 0;
         self.delegate = nil;
         self.background = nil;
+        strokes = [[StrokeCollection alloc] initWithBrush:10.0];
         [self setMultipleTouchEnabled:NO];
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(eraseDrawing:)];
         tap.numberOfTapsRequired = 2;
@@ -47,7 +48,7 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
-    strokes++;
+    [strokes addStroke:[touch locationInView:self]];
     counter = 0;
     bufferIndex = 0;
     points[0] = [touch locationInView:self];
@@ -106,6 +107,8 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    UITouch *touch = [touches anyObject];
+    [strokes addStroke:[touch locationInView:self]];
     [self setNeedsDisplay];
     [self.delegate mainImageDidChange];
 }
@@ -121,13 +124,13 @@
 }
 -(void)setImage:(UIImage *)image
 {
-    strokes=0;
+    [strokes clear];
     cachedImage = image;
     [self setNeedsDisplay];
     [self.delegate mainImageDidChange];
 }
 -(NSInteger)strokes {
-    return strokes;
+    return strokes.strokeCount;
 }
 
 @end
