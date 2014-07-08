@@ -71,7 +71,7 @@
 }
 -(NSArray *)sortedLabels {
     NSMutableArray *labels = [[NSMutableArray alloc] init];
-    for (NSDictionary *item in labeledstrokes) {
+    for (NSDictionary *item in [self sortStrokes:labeledstrokes]) {
         [labels addObject:[item valueForKey:@"label"]];
     }
     return labels;
@@ -82,5 +82,16 @@
     NSUInteger yD= point1.y-point2.y;
     NSUInteger dist = sqrt(xD*xD+yD*yD);
     return dist;
+}
+
+-(NSArray *)sortStrokes:(NSArray *)strokes {
+    NSArray *sorted = [strokes sortedArrayUsingComparator:^NSComparisonResult(NSValue *obj1, NSValue *obj2) {
+        CGPoint point1 = [[obj1 valueForKey:@"point"] CGPointValue];
+        CGPoint point2 = [[obj2 valueForKey:@"point"] CGPointValue];
+        if (point1.y < point2.y) return NSOrderedAscending;
+        if (point1.y == point2.y & point1.x < point2.x) return NSOrderedAscending;
+        return NSOrderedDescending;
+    }];
+    return sorted;
 }
 @end
