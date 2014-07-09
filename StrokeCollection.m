@@ -61,7 +61,7 @@
         bool loop = FALSE;
         if (index%2) {
             if ([self distanceBetween:[item CGPointValue] and:[[strokepoints objectAtIndex:(index-1)] CGPointValue]] < brushwidth) {loop = TRUE;}
-            label = [NSString stringWithFormat:@"%@%d",(loop ? @"*E": @"E"), index/2];
+            label = [NSString stringWithFormat:@"%@%d",(loop ? @"L": @"E"), index/2];
         } else {
             label = [NSString stringWithFormat:@"S%d", index/2];
         }
@@ -85,7 +85,13 @@
 }
 
 -(NSArray *)sortStrokes:(NSArray *)strokes {
-    NSArray *sorted = [strokes sortedArrayUsingComparator:^NSComparisonResult(NSValue *obj1, NSValue *obj2) {
+    NSMutableArray *trimmedlabels = [[NSMutableArray alloc] initWithArray:labeledstrokes]; //remove the starting point of loops
+    for (NSDictionary *item in labeledstrokes){
+        if ([[item valueForKey:@"label"] rangeOfString:@"L"].location == 0) {
+            [trimmedlabels removeObjectAtIndex:[labeledstrokes indexOfObject:item]-1];
+        }
+    };
+    NSArray *sorted = [trimmedlabels sortedArrayUsingComparator:^NSComparisonResult(NSValue *obj1, NSValue *obj2) {
         CGPoint point1 = [[obj1 valueForKey:@"point"] CGPointValue];
         CGPoint point2 = [[obj2 valueForKey:@"point"] CGPointValue];
         if (point1.y < point2.y) return NSOrderedAscending;
