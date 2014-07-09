@@ -8,7 +8,14 @@
 		<key>romaji</key>
 		<string>a</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			<string>S1</string>
+			<string>S0</string>
+			<string>E0</string>
+			<string>S2</string>
+			<string>E1</string>
+			<string>E2</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -16,7 +23,12 @@
 		<key>romaji</key>
 		<string>i</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			<string>S0</string>
+			<string>S1</string>
+			<string>E0</string>
+			<string>E1</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -24,7 +36,12 @@
 		<key>romaji</key>
 		<string>u</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			<string>S0</string>
+			<string>E0</string>
+			<string>S1</string>
+			<string>E1</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -32,7 +49,12 @@
 		<key>romaji</key>
 		<string>e</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			<string>S0</string>
+			<string>E0</string>
+			<string>S1</string>
+			<string>E1</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -40,7 +62,14 @@
 		<key>romaji</key>
 		<string>o</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			<string>S1</string>
+			<string>S0</string>
+			<string>E0</string>
+			<string>S2</string>
+			<string>E2</string>
+			<string>E1</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -48,7 +77,14 @@
 		<key>romaji</key>
 		<string>ya</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			<string>S2</string>
+			<string>S1</string>
+			<string>E1</string>
+			<string>S0</string>
+			<string>E0</string>
+			<string>E2</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -56,7 +92,12 @@
 		<key>romaji</key>
 		<string>yu</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			<string>S1</string>
+			<string>S0</string>
+			<string>E0</string>
+			<string>E1</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -64,7 +105,12 @@
 		<key>romaji</key>
 		<string>yo</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			<string>S1</string>
+			<string>S0</string>
+			<string>E0</string>
+			<string>E1</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -72,7 +118,14 @@
 		<key>romaji</key>
 		<string>ka</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			<string>S1</string>
+			<string>S2</string>
+			<string>S0</string>
+			<string>E2</string>
+			<string>E0</string>
+			<string>E1</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -80,7 +133,14 @@
 		<key>romaji</key>
 		<string>ki</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			<string>S2</string>
+			<string>E0</string>
+			<string>S0</string>
+			<string>E1</string>
+			<string>S1</string>
+			<string>E2</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -88,7 +148,10 @@
 		<key>romaji</key>
 		<string>ku</string>
 		<key>strokes</key>
-		<integer>1</integer>
+		<array>
+			<string>S0</string>
+			<string>E0</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -96,7 +159,14 @@
 		<key>romaji</key>
 		<string>ke</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			<string>S2</string>
+			<string>S0</string>
+			<string>E1</string>
+			<string>S1</string>
+			<string>E0</string>
+			<string>E2</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -104,7 +174,12 @@
 		<key>romaji</key>
 		<string>ko</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			<string>S0</string>
+			<string>E0</string>
+			<string>S1</string>
+			<string>E1</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -112,7 +187,20 @@
 		<key>romaji</key>
 		<string>kya</string>
 		<key>strokes</key>
-		<integer>6</integer>
+		<array>
+			<string>S2</string>
+			<string>E0</string>
+			<string>S0</string>
+			<string>E1</string>
+			<string>S1</string>
+			<string>S4</string>
+			<string>S5</string>
+			<string>E4</string>
+			<string>S3</string>
+			<string>E3</string>
+			<string>E2</string>
+			<string>E5</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -120,7 +208,18 @@
 		<key>romaji</key>
 		<string>kyu</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			<string>S2</string>
+			<string>E0</string>
+			<string>S0</string>
+			<string>E1</string>
+			<string>S1</string>
+			<string>S4</string>
+			<string>S3</string>
+			<string>E3</string>
+			<string>E2</string>
+			<string>E4</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -128,7 +227,18 @@
 		<key>romaji</key>
 		<string>kyo</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			<string>S2</string>
+			<string>E0</string>
+			<string>S0</string>
+			<string>E1</string>
+			<string>S1</string>
+			<string>S4</string>
+			<string>S3</string>
+			<string>E3</string>
+			<string>E2</string>
+			<string>E4</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -136,7 +246,18 @@
 		<key>romaji</key>
 		<string>ga</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			<string>S1</string>
+			<string>S3</string>
+			<string>S4</string>
+			<string>E3</string>
+			<string>E4</string>
+			<string>S2</string>
+			<string>S0</string>
+			<string>E2</string>
+			<string>E0</string>
+			<string>E1</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -144,7 +265,9 @@
 		<key>romaji</key>
 		<string>gi</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -152,7 +275,9 @@
 		<key>romaji</key>
 		<string>gu</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -160,7 +285,9 @@
 		<key>romaji</key>
 		<string>ge</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -168,7 +295,9 @@
 		<key>romaji</key>
 		<string>go</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -176,7 +305,9 @@
 		<key>romaji</key>
 		<string>gya</string>
 		<key>strokes</key>
-		<integer>8</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -184,7 +315,9 @@
 		<key>romaji</key>
 		<string>gyu</string>
 		<key>strokes</key>
-		<integer>7</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -192,7 +325,9 @@
 		<key>romaji</key>
 		<string>gyo</string>
 		<key>strokes</key>
-		<integer>7</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -200,7 +335,9 @@
 		<key>romaji</key>
 		<string>sa</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -208,7 +345,9 @@
 		<key>romaji</key>
 		<string>shi</string>
 		<key>strokes</key>
-		<integer>1</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -216,7 +355,9 @@
 		<key>romaji</key>
 		<string>su</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -224,7 +365,9 @@
 		<key>romaji</key>
 		<string>se</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -232,7 +375,9 @@
 		<key>romaji</key>
 		<string>so</string>
 		<key>strokes</key>
-		<integer>1</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -240,7 +385,9 @@
 		<key>romaji</key>
 		<string>sya</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -248,7 +395,9 @@
 		<key>romaji</key>
 		<string>syu</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -256,7 +405,9 @@
 		<key>romaji</key>
 		<string>syo</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -264,7 +415,9 @@
 		<key>romaji</key>
 		<string>za</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -272,7 +425,9 @@
 		<key>romaji</key>
 		<string>ji</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -280,7 +435,9 @@
 		<key>romaji</key>
 		<string>zu</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -288,7 +445,9 @@
 		<key>romaji</key>
 		<string>ze</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -296,7 +455,9 @@
 		<key>romaji</key>
 		<string>zo</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -304,7 +465,9 @@
 		<key>romaji</key>
 		<string>zya</string>
 		<key>strokes</key>
-		<integer>6</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -312,7 +475,9 @@
 		<key>romaji</key>
 		<string>zyu</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -320,7 +485,9 @@
 		<key>romaji</key>
 		<string>zyo</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -328,7 +495,9 @@
 		<key>romaji</key>
 		<string>ta</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -336,7 +505,9 @@
 		<key>romaji</key>
 		<string>chi</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -344,7 +515,9 @@
 		<key>romaji</key>
 		<string>tsu</string>
 		<key>strokes</key>
-		<integer>1</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -352,7 +525,9 @@
 		<key>romaji</key>
 		<string>te</string>
 		<key>strokes</key>
-		<integer>1</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -360,7 +535,9 @@
 		<key>romaji</key>
 		<string>to</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -368,7 +545,9 @@
 		<key>romaji</key>
 		<string>cha</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -376,7 +555,9 @@
 		<key>romaji</key>
 		<string>chu</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -384,7 +565,9 @@
 		<key>romaji</key>
 		<string>cho</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -392,7 +575,9 @@
 		<key>romaji</key>
 		<string>da</string>
 		<key>strokes</key>
-		<integer>6</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -400,7 +585,9 @@
 		<key>romaji</key>
 		<string>ji</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -408,7 +595,9 @@
 		<key>romaji</key>
 		<string>zu</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -416,7 +605,9 @@
 		<key>romaji</key>
 		<string>de</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -424,7 +615,9 @@
 		<key>romaji</key>
 		<string>do</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -432,7 +625,9 @@
 		<key>romaji</key>
 		<string>jya</string>
 		<key>strokes</key>
-		<integer>7</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -440,7 +635,9 @@
 		<key>romaji</key>
 		<string>jyu</string>
 		<key>strokes</key>
-		<integer>6</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -448,7 +645,9 @@
 		<key>romaji</key>
 		<string>jyo</string>
 		<key>strokes</key>
-		<integer>6</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -456,7 +655,9 @@
 		<key>romaji</key>
 		<string>na</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -464,7 +665,9 @@
 		<key>romaji</key>
 		<string>ni</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -472,7 +675,9 @@
 		<key>romaji</key>
 		<string>nu</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -480,7 +685,9 @@
 		<key>romaji</key>
 		<string>ne</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -488,7 +695,9 @@
 		<key>romaji</key>
 		<string>no</string>
 		<key>strokes</key>
-		<integer>1</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -496,7 +705,9 @@
 		<key>romaji</key>
 		<string>nya</string>
 		<key>strokes</key>
-		<integer>6</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -504,7 +715,9 @@
 		<key>romaji</key>
 		<string>nyu</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -512,7 +725,9 @@
 		<key>romaji</key>
 		<string>nyo</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -520,7 +735,9 @@
 		<key>romaji</key>
 		<string>ma</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -528,7 +745,9 @@
 		<key>romaji</key>
 		<string>mi</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -536,7 +755,9 @@
 		<key>romaji</key>
 		<string>mu</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -544,7 +765,9 @@
 		<key>romaji</key>
 		<string>me</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -552,7 +775,9 @@
 		<key>romaji</key>
 		<string>mo</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -560,7 +785,9 @@
 		<key>romaji</key>
 		<string>mya</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -568,7 +795,9 @@
 		<key>romaji</key>
 		<string>myu</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -576,7 +805,9 @@
 		<key>romaji</key>
 		<string>myo</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -584,7 +815,9 @@
 		<key>romaji</key>
 		<string>ha</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -592,7 +825,9 @@
 		<key>romaji</key>
 		<string>hi</string>
 		<key>strokes</key>
-		<integer>1</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -600,7 +835,9 @@
 		<key>romaji</key>
 		<string>fu</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -608,7 +845,9 @@
 		<key>romaji</key>
 		<string>he</string>
 		<key>strokes</key>
-		<integer>1</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -616,7 +855,9 @@
 		<key>romaji</key>
 		<string>ho</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -624,7 +865,9 @@
 		<key>romaji</key>
 		<string>hya</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -632,7 +875,9 @@
 		<key>romaji</key>
 		<string>hyu</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -640,7 +885,9 @@
 		<key>romaji</key>
 		<string>hyo</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -648,7 +895,9 @@
 		<key>romaji</key>
 		<string>ba</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -656,7 +905,9 @@
 		<key>romaji</key>
 		<string>bi</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -664,7 +915,9 @@
 		<key>romaji</key>
 		<string>bu</string>
 		<key>strokes</key>
-		<integer>6</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -672,7 +925,9 @@
 		<key>romaji</key>
 		<string>be</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -680,7 +935,9 @@
 		<key>romaji</key>
 		<string>bo</string>
 		<key>strokes</key>
-		<integer>6</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -688,7 +945,9 @@
 		<key>romaji</key>
 		<string>bya</string>
 		<key>strokes</key>
-		<integer>6</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -696,7 +955,9 @@
 		<key>romaji</key>
 		<string>byu</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -704,7 +965,9 @@
 		<key>romaji</key>
 		<string>byo</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -712,7 +975,9 @@
 		<key>romaji</key>
 		<string>pa</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -720,7 +985,11 @@
 		<key>romaji</key>
 		<string>pi</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			<string>S0</string>
+			<string>L1</string>
+			<string>E0</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -728,7 +997,17 @@
 		<key>romaji</key>
 		<string>pu</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			<string>S0</string>
+			<string>L1</string>
+			<string>E0</string>
+			<string>S1</string>
+			<string>S3</string>
+			<string>S2</string>
+			<string>E3</string>
+			<string>E1</string>
+			<string>E2</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -736,7 +1015,11 @@
 		<key>romaji</key>
 		<string>pe</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			<string>L1</string>
+			<string>S0</string>
+			<string>E0</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -744,7 +1027,9 @@
 		<key>romaji</key>
 		<string>po</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -752,7 +1037,9 @@
 		<key>romaji</key>
 		<string>pya</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -760,7 +1047,9 @@
 		<key>romaji</key>
 		<string>pyu</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -768,7 +1057,9 @@
 		<key>romaji</key>
 		<string>pyo</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -776,7 +1067,12 @@
 		<key>romaji</key>
 		<string>ra</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			<string>S0</string>
+			<string>E0</string>
+			<string>S1</string>
+			<string>E1</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -784,7 +1080,12 @@
 		<key>romaji</key>
 		<string>ri</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			<string>S0</string>
+			<string>S1</string>
+			<string>E0</string>
+			<string>E1</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -792,7 +1093,10 @@
 		<key>romaji</key>
 		<string>ru</string>
 		<key>strokes</key>
-		<integer>1</integer>
+		<array>
+			<string>S0</string>
+			<string>E0</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -800,7 +1104,12 @@
 		<key>romaji</key>
 		<string>re</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			<string>S0</string>
+			<string>S1</string>
+			<string>E1</string>
+			<string>E0</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -808,7 +1117,10 @@
 		<key>romaji</key>
 		<string>ro</string>
 		<key>strokes</key>
-		<integer>1</integer>
+		<array>
+			<string>S0</string>
+			<string>E0</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -816,7 +1128,9 @@
 		<key>romaji</key>
 		<string>rya</string>
 		<key>strokes</key>
-		<integer>5</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -824,7 +1138,9 @@
 		<key>romaji</key>
 		<string>ryu</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -832,7 +1148,9 @@
 		<key>romaji</key>
 		<string>ryo</string>
 		<key>strokes</key>
-		<integer>4</integer>
+		<array>
+			
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -840,7 +1158,12 @@
 		<key>romaji</key>
 		<string>wa</string>
 		<key>strokes</key>
-		<integer>2</integer>
+		<array>
+			<string>S0</string>
+			<string>S1</string>
+			<string>E1</string>
+			<string>E0</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -848,7 +1171,14 @@
 		<key>romaji</key>
 		<string>wo</string>
 		<key>strokes</key>
-		<integer>3</integer>
+		<array>
+			<string>S1</string>
+			<string>S0</string>
+			<string>E0</string>
+			<string>S2</string>
+			<string>E1</string>
+			<string>E2</string>
+		</array>
 	</dict>
 	<dict>
 		<key>character</key>
@@ -856,7 +1186,10 @@
 		<key>romaji</key>
 		<string>n</string>
 		<key>strokes</key>
-		<integer>1</integer>
+		<array>
+			<string>S0</string>
+			<string>E0</string>
+		</array>
 	</dict>
 </array>
 </plist>
