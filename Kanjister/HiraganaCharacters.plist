@@ -336,7 +336,10 @@
 		<string>sa</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S1</string>
+			<string>E0</string>
+			<string>S0</string>
+			<string>E1</string>
 		</array>
 	</dict>
 	<dict>
@@ -346,7 +349,8 @@
 		<string>shi</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>E0</string>
 		</array>
 	</dict>
 	<dict>
@@ -356,7 +360,10 @@
 		<string>su</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S1</string>
+			<string>S0</string>
+			<string>E0</string>
+			<string>E1</string>
 		</array>
 	</dict>
 	<dict>
@@ -366,7 +373,12 @@
 		<string>se</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S1</string>
+			<string>S2</string>
+			<string>E0</string>
+			<string>S0</string>
+			<string>E1</string>
+			<string>E2</string>
 		</array>
 	</dict>
 	<dict>
@@ -376,7 +388,8 @@
 		<string>so</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>E0</string>
 		</array>
 	</dict>
 	<dict>
@@ -386,7 +399,14 @@
 		<string>sya</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>S2</string>
+			<string>S3</string>
+			<string>E2</string>
+			<string>S1</string>
+			<string>E0</string>
+			<string>E1</string>
+			<string>E3</string>
 		</array>
 	</dict>
 	<dict>
@@ -396,7 +416,12 @@
 		<string>syu</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>S2</string>
+			<string>S1</string>
+			<string>E0</string>
+			<string>E1</string>
+			<string>E2</string>
 		</array>
 	</dict>
 	<dict>
@@ -406,7 +431,12 @@
 		<string>syo</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>S2</string>
+			<string>S1</string>
+			<string>E1</string>
+			<string>E0</string>
+			<string>E2</string>
 		</array>
 	</dict>
 	<dict>
@@ -496,7 +526,14 @@
 		<string>ta</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S1</string>
+			<string>E0</string>
+			<string>S0</string>
+			<string>S2</string>
+			<string>E2</string>
+			<string>S3</string>
+			<string>E3</string>
+			<string>E1</string>
 		</array>
 	</dict>
 	<dict>
@@ -506,7 +543,10 @@
 		<string>chi</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S1</string>
+			<string>E0</string>
+			<string>S0</string>
+			<string>E1</string>
 		</array>
 	</dict>
 	<dict>
@@ -516,7 +556,8 @@
 		<string>tsu</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>E0</string>
 		</array>
 	</dict>
 	<dict>
@@ -526,7 +567,8 @@
 		<string>te</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>E0</string>
 		</array>
 	</dict>
 	<dict>
@@ -536,7 +578,10 @@
 		<string>to</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>S1</string>
+			<string>E0</string>
+			<string>E1</string>
 		</array>
 	</dict>
 	<dict>
@@ -546,7 +591,16 @@
 		<string>cha</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S1</string>
+			<string>E0</string>
+			<string>S0</string>
+			<string>S3</string>
+			<string>S4</string>
+			<string>E3</string>
+			<string>S2</string>
+			<string>E2</string>
+			<string>E1</string>
+			<string>E4</string>
 		</array>
 	</dict>
 	<dict>
@@ -556,7 +610,14 @@
 		<string>chu</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S1</string>
+			<string>E0</string>
+			<string>S0</string>
+			<string>S3</string>
+			<string>S2</string>
+			<string>E2</string>
+			<string>E1</string>
+			<string>E3</string>
 		</array>
 	</dict>
 	<dict>
@@ -566,7 +627,14 @@
 		<string>cho</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S1</string>
+			<string>E0</string>
+			<string>S0</string>
+			<string>S3</string>
+			<string>S2</string>
+			<string>E2</string>
+			<string>E1</string>
+			<string>E3</string>
 		</array>
 	</dict>
 	<dict>
@@ -606,7 +674,12 @@
 		<string>de</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>S1</string>
+			<string>S2</string>
+			<string>E1</string>
+			<string>E2</string>
+			<string>E0</string>
 		</array>
 	</dict>
 	<dict>
@@ -616,7 +689,14 @@
 		<string>do</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>S2</string>
+			<string>S3</string>
+			<string>E2</string>
+			<string>E3</string>
+			<string>S1</string>
+			<string>E0</string>
+			<string>E1</string>
 		</array>
 	</dict>
 	<dict>
@@ -656,7 +736,14 @@
 		<string>na</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S1</string>
+			<string>E0</string>
+			<string>S0</string>
+			<string>S2</string>
+			<string>E2</string>
+			<string>S3</string>
+			<string>E1</string>
+			<string>E3</string>
 		</array>
 	</dict>
 	<dict>
@@ -666,7 +753,12 @@
 		<string>ni</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>S1</string>
+			<string>E1</string>
+			<string>S2</string>
+			<string>E2</string>
+			<string>E0</string>
 		</array>
 	</dict>
 	<dict>
@@ -676,7 +768,10 @@
 		<string>nu</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S1</string>
+			<string>S0</string>
+			<string>E0</string>
+			<string>E1</string>
 		</array>
 	</dict>
 	<dict>
@@ -686,7 +781,10 @@
 		<string>ne</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>S1</string>
+			<string>E1</string>
+			<string>E0</string>
 		</array>
 	</dict>
 	<dict>
@@ -696,7 +794,8 @@
 		<string>no</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>E0</string>
 		</array>
 	</dict>
 	<dict>
@@ -706,7 +805,17 @@
 		<string>nya</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>E1</string>
+			<string>S1</string>
+			<string>S4</string>
+			<string>S5</string>
+			<string>E4</string>
+			<string>S3</string>
+			<string>S2</string>
+			<string>E3</string>
+			<string>E2</string>
+			<string>E5</string>
 		</array>
 	</dict>
 	<dict>
@@ -716,7 +825,16 @@
 		<string>nyu</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>E1</string>
+			<string>S1</string>
+			<string>S4</string>
+			<string>S3</string>
+			<string>S2</string>
+			<string>E3</string>
+			<string>E2</string>
+			<string>E0</string>
+			<string>E4</string>
 		</array>
 	</dict>
 	<dict>
@@ -726,7 +844,16 @@
 		<string>nyo</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>E1</string>
+			<string>S0</string>
+			<string>S4</string>
+			<string>S3</string>
+			<string>E3</string>
+			<string>S2</string>
+			<string>E2</string>
+			<string>E0</string>
+			<string>E4</string>
 		</array>
 	</dict>
 	<dict>
@@ -736,7 +863,12 @@
 		<string>ma</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S2</string>
+			<string>E0</string>
+			<string>S0</string>
+			<string>E1</string>
+			<string>S1</string>
+			<string>E2</string>
 		</array>
 	</dict>
 	<dict>
@@ -746,7 +878,10 @@
 		<string>mi</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>S1</string>
+			<string>E0</string>
+			<string>E1</string>
 		</array>
 	</dict>
 	<dict>
@@ -756,7 +891,12 @@
 		<string>mu</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S1</string>
+			<string>E0</string>
+			<string>S0</string>
+			<string>S2</string>
+			<string>E2</string>
+			<string>E1</string>
 		</array>
 	</dict>
 	<dict>
@@ -766,7 +906,10 @@
 		<string>me</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S1</string>
+			<string>S0</string>
+			<string>E0</string>
+			<string>E1</string>
 		</array>
 	</dict>
 	<dict>
@@ -776,7 +919,12 @@
 		<string>mo</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>S1</string>
+			<string>E1</string>
+			<string>S2</string>
+			<string>E2</string>
+			<string>E0</string>
 		</array>
 	</dict>
 	<dict>
@@ -816,7 +964,12 @@
 		<string>ha</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S2</string>
+			<string>S0</string>
+			<string>S1</string>
+			<string>E1</string>
+			<string>E2</string>
+			<string>E0</string>
 		</array>
 	</dict>
 	<dict>
@@ -826,7 +979,8 @@
 		<string>hi</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>E0</string>
 		</array>
 	</dict>
 	<dict>
@@ -836,7 +990,14 @@
 		<string>fu</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>E0</string>
+			<string>S1</string>
+			<string>S3</string>
+			<string>S2</string>
+			<string>E3</string>
+			<string>E1</string>
+			<string>E2</string>
 		</array>
 	</dict>
 	<dict>
@@ -846,7 +1007,8 @@
 		<string>he</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>E0</string>
 		</array>
 	</dict>
 	<dict>
@@ -856,7 +1018,14 @@
 		<string>ho</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>S1</string>
+			<string>E1</string>
+			<string>S3</string>
+			<string>S2</string>
+			<string>E2</string>
+			<string>E3</string>
+			<string>E0</string>
 		</array>
 	</dict>
 	<dict>
@@ -866,7 +1035,14 @@
 		<string>hya</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>E1</string>
+			<string>S2</string>
+			<string>S3</string>
+			<string>E2</string>
+			<string>S1</string>
+			<string>E1</string>
+			<string>E3</string>
 		</array>
 	</dict>
 	<dict>
@@ -876,7 +1052,12 @@
 		<string>hyu</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>E0</string>
+			<string>S2</string>
+			<string>S1</string>
+			<string>E1</string>
+			<string>E2</string>
 		</array>
 	</dict>
 	<dict>
@@ -886,7 +1067,12 @@
 		<string>hyo</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>S2</string>
+			<string>S1</string>
+			<string>E1</string>
+			<string>E0</string>
+			<string>E2</string>
 		</array>
 	</dict>
 	<dict>
@@ -1129,7 +1315,16 @@
 		<string>rya</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>S1</string>
+			<string>S3</string>
+			<string>S4</string>
+			<string>S2</string>
+			<string>E3</string>
+			<string>E0</string>
+			<string>E2</string>
+			<string>E1</string>
+			<string>E4</string>
 		</array>
 	</dict>
 	<dict>
@@ -1139,7 +1334,14 @@
 		<string>ryu</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>S1</string>
+			<string>S3</string>
+			<string>S2</string>
+			<string>E2</string>
+			<string>E0</string>
+			<string>E1</string>
+			<string>E3</string>
 		</array>
 	</dict>
 	<dict>
@@ -1149,7 +1351,14 @@
 		<string>ryo</string>
 		<key>strokes</key>
 		<array>
-			
+			<string>S0</string>
+			<string>S1</string>
+			<string>S3</string>
+			<string>S2</string>
+			<string>E2</string>
+			<string>E0</string>
+			<string>E3</string>
+			<string>E1</string>
 		</array>
 	</dict>
 	<dict>

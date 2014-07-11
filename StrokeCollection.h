@@ -14,4 +14,5 @@
 -(NSInteger)strokeCount;
 -(NSTimeInterval)duration;
 -(void)clear;
++(NSUInteger)countStrokes:(NSArray *)array;
 @end

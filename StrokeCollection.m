@@ -5,15 +5,21 @@
 //  Created by Sakari Ikonen on 07/07/14.
 //  Copyright (c) 2014 Sakari Ikonen. All rights reserved.
 //
+// code for describing stroke order of symbols, as an array.
+//
+// output consists of S#, E#, L#, D#, where S denotes starting point, E the Ending point,
+// L a loop. and D a dakuten mark.
+// # is the absolute number of the stroke, not the index in the strokearray. for the dakuten, the index should be the last stroke.
 
 #import "StrokeCollection.h"
-
+#define FUDGE 5
 @implementation StrokeCollection {
     NSMutableArray *strokepoints;
     NSDate *strokestart;
     NSDate *laststroke;
     NSUInteger brushwidth;
     NSMutableArray *labeledstrokes;
+    NSUInteger strokecount;
 }
 
 - (id)initWithBrush:(NSUInteger)brush
@@ -40,7 +46,10 @@
 
 -(NSInteger)strokeCount {
     NSLog(@"labels %@", [self sortedLabels]);
-    return strokepoints.count/2;
+    if (strokecount==0) {
+        strokecount = [StrokeCollection countStrokes:[self sortedLabels]];
+    }
+    return strokecount;
 }
 -(NSTimeInterval)duration {
     return [laststroke timeIntervalSince1970] - [strokestart timeIntervalSince1970];
@@ -51,6 +60,7 @@
     [labeledstrokes removeAllObjects];
     strokestart = nil;
     laststroke = nil;
+    strokecount = 0;
 }
 
 -(void)updateStrokeLabels {
@@ -59,9 +69,17 @@
         NSUInteger index = [strokepoints indexOfObject:item];
         NSString *label;
         bool loop = FALSE;
+        bool daku = FALSE;
         if (index%2) {
-            if ([self distanceBetween:[item CGPointValue] and:[[strokepoints objectAtIndex:(index-1)] CGPointValue]] < brushwidth) {loop = TRUE;}
-            label = [NSString stringWithFormat:@"%@%d",(loop ? @"L": @"E"), index/2];
+            if ([self distanceBetween:[item CGPointValue] and:[[strokepoints objectAtIndex:(index-1)] CGPointValue]] < brushwidth*2) {loop = TRUE; }
+            if (index >3) {
+                bool lasttopdown = [[strokepoints objectAtIndex:index-3] CGPointValue].y > [[strokepoints objectAtIndex:index-2] CGPointValue].y;
+                bool currenttopdown = [item CGPointValue].y < [[strokepoints objectAtIndex:index-1] CGPointValue].y;
+                NSUInteger distbetweenstarts = [self distanceBetween:[[strokepoints objectAtIndex:index-1] CGPointValue] and:[[strokepoints objectAtIndex:index-3] CGPointValue]];
+                NSUInteger distbetweenends = [self distanceBetween:[item CGPointValue] and:[[strokepoints objectAtIndex:index-2] CGPointValue]];
+                if (lasttopdown && currenttopdown && distbetweenends < brushwidth*FUDGE && distbetweenstarts < brushwidth*FUDGE){daku=TRUE;loop=FALSE;}
+            }
+            label = [NSString stringWithFormat:@"%@%d",(loop ? @"L": (daku ? @"D": @"E")), index/2];
         } else {
             label = [NSString stringWithFormat:@"S%d", index/2];
         }
@@ -85,12 +103,18 @@
 }
 
 -(NSArray *)sortStrokes:(NSArray *)strokes {
-    NSMutableArray *trimmedlabels = [[NSMutableArray alloc] initWithArray:labeledstrokes]; //remove the starting point of loops
+    NSMutableArray *trimmedlabels = [[NSMutableArray alloc] initWithArray:labeledstrokes]; //remove the starting point of loops and previous strokes of dakuten
+    NSMutableIndexSet *removeindexes = [[NSMutableIndexSet alloc] init];
     for (NSDictionary *item in labeledstrokes){
-        if ([[item valueForKey:@"label"] rangeOfString:@"L"].location == 0) {
-            [trimmedlabels removeObjectAtIndex:[labeledstrokes indexOfObject:item]-1];
+        if ([[[item valueForKey:@"label"] substringToIndex:1] isEqualToString:@"L"]) {
+            [removeindexes addIndex:[labeledstrokes indexOfObject:item]-1];
+        }
+        if ([[[item valueForKey:@"label"] substringToIndex:1] isEqualToString:@"D"]) {
+            [removeindexes addIndex:[labeledstrokes indexOfObject:item]-1];
+            [removeindexes addIndex:[labeledstrokes indexOfObject:item]-2];
         }
     };
+    [trimmedlabels removeObjectsAtIndexes:removeindexes];
     NSArray *sorted = [trimmedlabels sortedArrayUsingComparator:^NSComparisonResult(NSValue *obj1, NSValue *obj2) {
         CGPoint point1 = [[obj1 valueForKey:@"point"] CGPointValue];
         CGPoint point2 = [[obj2 valueForKey:@"point"] CGPointValue];
@@ -100,4 +124,15 @@
     }];
     return sorted;
 }
+
++(NSUInteger)countStrokes:(NSArray *)array {
+    NSUInteger count = 0;
+    for (NSString *item in array) {
+        if ([[item substringToIndex:1] isEqualToString:@"S"]) {count++;}
+        if ([[item substringToIndex:1] isEqualToString:@"L"]) {count++;}
+        if ([[item substringToIndex:1] isEqualToString:@"D"]) {count+=2;}
+        }
+    return count;
+}
+
 @end

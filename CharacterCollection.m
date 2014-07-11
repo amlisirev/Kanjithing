@@ -7,6 +7,7 @@
 //
 
 #import "CharacterCollection.h"
+#import "StrokeCollection.h"
 
 @implementation CharacterCollection
 {
@@ -33,7 +34,7 @@
     return 0;
 }
 -(NSInteger)currentCharStrokes {
-    return [[hiragana[currentcharidx] valueForKey:@"strokes"] intValue];
+    return [StrokeCollection countStrokes:[hiragana[currentcharidx] valueForKey:@"strokes"]];
 }
 
 -(void)upRepetitions {
