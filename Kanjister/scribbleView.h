@@ -11,7 +11,7 @@
 @protocol scribbleViewDelegate <NSObject>
 
 -(void)mainImageDidChange;
-
+-(void)strokeDidFinish;
 @end
 
 @interface scribbleView : UIView
@@ -20,4 +20,5 @@
 @property (weak) id <scribbleViewDelegate> delegate;
 
 -(NSInteger)strokes;
+-(NSArray*)strokelist;
 @end

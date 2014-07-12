@@ -111,6 +111,7 @@
     [strokes addStroke:[touch locationInView:self]];
     [self setNeedsDisplay];
     [self.delegate mainImageDidChange];
+    [self.delegate strokeDidFinish];
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
@@ -131,6 +132,9 @@
 }
 -(NSInteger)strokes {
     return strokes.strokeCount;
+}
+-(NSArray*)strokelist {
+    return strokes.sortedLabels;
 }
 
 @end

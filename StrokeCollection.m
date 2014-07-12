@@ -121,6 +121,17 @@
     }];
     return sorted;
 }
++(bool)compare:(NSArray *)array1 to:(NSArray *)array2 {
+    if (array1 == array2) {return true;}
+    if (array1.count != array2.count) {return false;}
+    for (NSString *item in array1) {
+        uint index = [array1 indexOfObject:item];
+        if (![item isEqualToString:array2[index]]) {
+            return false;
+        }
+    }
+    return true;
+}
 
 +(NSUInteger)countStrokes:(NSArray *)array {
     NSUInteger count = 0;

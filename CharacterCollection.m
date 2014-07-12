@@ -14,11 +14,12 @@
     int currentcharidx;
     NSArray *hiragana;
     NSArray *katakana;
-    NSArray *repetitions;
+    NSUInteger repetitions;
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
     currentcharidx = 0;
+    repetitions = 0;
     NSString *hiraganafile = [[NSBundle mainBundle] pathForResource:@"HiraganaCharacters" ofType:@"plist"];
     NSString *katakanafile = [[NSBundle mainBundle] pathForResource:@"HiraganaCharacters" ofType:@"plist"];
     hiragana = [NSArray arrayWithContentsOfFile:hiraganafile];
@@ -36,9 +37,15 @@
 -(NSInteger)currentCharStrokes {
     return [StrokeCollection countStrokes:[hiragana[currentcharidx] valueForKey:@"strokes"]];
 }
+-(NSArray *)currentCharStrokeList {
+    return [hiragana[currentcharidx] valueForKeyPath:@"strokes"];
+}
 
+-(NSUInteger)repetitions {
+    return repetitions;
+}
 -(void)upRepetitions {
-    
+    repetitions++;
 }
 
 -(NSString *)currentCharacter {
@@ -47,9 +54,11 @@
 
 -(void)next {
     currentcharidx++;
+    repetitions=0;
 }
 -(void)previous {
     currentcharidx--;
+    repetitions=0;
 }
 
 -(NSString *)romaji {

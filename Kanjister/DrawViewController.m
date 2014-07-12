@@ -10,6 +10,7 @@
 #import "TextSpeaker.h"
 #import "TextRecognizer.h"
 #import "CharacterCollection.h"
+#import "StrokeCollection.h"
 
 @interface DrawViewController ()
 
@@ -45,23 +46,24 @@
     recent_eval = NO;
     [self evaluateResult];
 }
+-(void)strokeDidFinish {
+    return;
+}
 
 -(void)evaluateResult {
     if (recent_eval) return;
     if (self.mainImage.image) {
         NSString *text = [self translateImage:self.mainImage.image];
-        if ([self isTextMatching:text] && self.mainImage.strokes==character.currentCharStrokes) {
+        if ([self isTextMatching:text] && [StrokeCollection compare:character.currentCharStrokeList to:self.mainImage.strokelist]) {
             self.translatedText.text = @"correct!";
             recent_eval = YES;
-            if (repetitions > 2) {
+            if ([character repetitions] > 2) {
                 [character next];
                 [speaker playSound:@"complete.wav"];
                 [self updateCurrentChar];
-                repetitions = 0;
             } else {
                 [speaker playSound:@"success.wav"];
-
-                repetitions++;
+                [character upRepetitions];
             }
         } else {
             return;

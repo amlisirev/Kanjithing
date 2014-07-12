@@ -12,7 +12,9 @@
 -(id)initWithBrush:(NSUInteger)brush;
 -(void)addStroke:(CGPoint)point;
 -(NSInteger)strokeCount;
+-(NSArray*)sortedLabels;
 -(NSTimeInterval)duration;
 -(void)clear;
 +(NSUInteger)countStrokes:(NSArray *)array;
++(bool)compare:(NSArray*)array1 to:(NSArray*)array2;
 @end
