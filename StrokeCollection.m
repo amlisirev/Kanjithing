@@ -70,14 +70,17 @@
         NSString *label;
         bool loop = FALSE;
         bool daku = FALSE;
+        bool currenttopdown = FALSE;
+        bool lasttopdown = FALSE;
         if (index%2) {
-            if ([self distanceBetween:[item CGPointValue] and:[[strokepoints objectAtIndex:(index-1)] CGPointValue]] < brushwidth*2) {loop = TRUE; }
-            if (index >3) {
-                bool lasttopdown = [[strokepoints objectAtIndex:index-3] CGPointValue].y > [[strokepoints objectAtIndex:index-2] CGPointValue].y;
-                bool currenttopdown = [item CGPointValue].y < [[strokepoints objectAtIndex:index-1] CGPointValue].y;
-                NSUInteger distbetweenstarts = [self distanceBetween:[[strokepoints objectAtIndex:index-1] CGPointValue] and:[[strokepoints objectAtIndex:index-3] CGPointValue]];
-                NSUInteger distbetweenends = [self distanceBetween:[item CGPointValue] and:[[strokepoints objectAtIndex:index-2] CGPointValue]];
-                if (lasttopdown && currenttopdown && distbetweenends < brushwidth*FUDGE && distbetweenstarts < brushwidth*FUDGE){daku=TRUE;loop=FALSE;}
+            if ([StrokeCollection distanceBetween:[item CGPointValue] and:[[strokepoints objectAtIndex:(index-1)] CGPointValue]] < brushwidth*2) {loop = TRUE; }
+            if (index >=3) {
+                lasttopdown = [StrokeCollection isAbove:[strokepoints objectAtIndex:index-2] of:[strokepoints objectAtIndex:index-3]];
+                currenttopdown = [StrokeCollection isAbove:item of:[strokepoints objectAtIndex:index-1]];
+                NSUInteger distbetweenstarts = [StrokeCollection distanceBetween:[[strokepoints objectAtIndex:index-1] CGPointValue] and:[[strokepoints objectAtIndex:index-3] CGPointValue]];
+                NSUInteger distbetweenends = [StrokeCollection distanceBetween:[item CGPointValue] and:[[strokepoints objectAtIndex:index-2] CGPointValue]];
+                NSLog(@"%d and %d, true? %d, %d, %d, %d", distbetweenends, distbetweenstarts, lasttopdown, currenttopdown, distbetweenends < brushwidth*FUDGE, distbetweenstarts < brushwidth*FUDGE);
+                if (lasttopdown && currenttopdown && (distbetweenends < brushwidth*FUDGE) && (distbetweenstarts < brushwidth*FUDGE)){daku=TRUE;loop=FALSE;}
             }
             label = [NSString stringWithFormat:@"%@%d",(loop ? @"L": (daku ? @"D": @"E")), index/2];
         } else {
@@ -95,13 +98,6 @@
     return labels;
 }
 
--(NSUInteger)distanceBetween:(CGPoint)point1 and:(CGPoint)point2{
-    NSUInteger xD= point1.x-point2.x;
-    NSUInteger yD= point1.y-point2.y;
-    NSUInteger dist = sqrt(xD*xD+yD*yD);
-    return dist;
-}
-
 -(NSArray *)sortStrokes:(NSArray *)strokes {
     NSMutableArray *trimmedlabels = [[NSMutableArray alloc] initWithArray:labeledstrokes]; //remove the starting point of loops and previous strokes of dakuten
     NSMutableIndexSet *removeindexes = [[NSMutableIndexSet alloc] init];
@@ -112,6 +108,7 @@
         if ([[[item valueForKey:@"label"] substringToIndex:1] isEqualToString:@"D"]) {
             [removeindexes addIndex:[labeledstrokes indexOfObject:item]-1];
             [removeindexes addIndex:[labeledstrokes indexOfObject:item]-2];
+            [removeindexes addIndex:[labeledstrokes indexOfObject:item]-3];
         }
     };
     [trimmedlabels removeObjectsAtIndexes:removeindexes];
@@ -134,5 +131,14 @@
         }
     return count;
 }
-
++(bool)isAbove:(NSValue *)point1 of:(NSValue *)point2 {
+    if ([point1 CGPointValue].y > [point2 CGPointValue].y) {return true;}
+    return false;
+}
++(NSUInteger)distanceBetween:(CGPoint)point1 and:(CGPoint)point2{
+    NSUInteger xD= point1.x-point2.x;
+    NSUInteger yD= point1.y-point2.y;
+    NSUInteger dist = sqrt(xD*xD+yD*yD);
+    return dist;
+}
 @end
