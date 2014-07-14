@@ -17,18 +17,16 @@
     NSUInteger repetitions;
 }
 
--(id)initWithCoder:(NSCoder *)aDecoder {
-    currentcharidx = 0;
-    repetitions = 0;
-    NSString *hiraganafile = [[NSBundle mainBundle] pathForResource:@"HiraganaCharacters" ofType:@"plist"];
-    NSString *katakanafile = [[NSBundle mainBundle] pathForResource:@"HiraganaCharacters" ofType:@"plist"];
-    hiragana = [NSArray arrayWithContentsOfFile:hiraganafile];
-    katakana = [NSArray arrayWithContentsOfFile:katakanafile];
+-(id)init {
+    if (self = [super init]) {
+        currentcharidx = 0;
+        repetitions = 0;
+        NSString *hiraganafile = [[NSBundle mainBundle] pathForResource:@"HiraganaCharacters" ofType:@"plist"];
+        NSString *katakanafile = [[NSBundle mainBundle] pathForResource:@"HiraganaCharacters" ofType:@"plist"];
+        hiragana = [NSArray arrayWithContentsOfFile:hiraganafile];
+        katakana = [NSArray arrayWithContentsOfFile:katakanafile];    
+    }
     return self;
-}
-
--(void)encodeWithCoder:(NSCoder *)aCoder {
-    
 }
 
 -(NSInteger)currentCharRepetitions{

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CharacterCollection : NSObject <NSCoding>
+@interface CharacterCollection : NSObject
 
 -(void)next;
 -(void)previous;

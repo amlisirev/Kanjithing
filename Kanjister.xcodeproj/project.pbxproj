@@ -13,6 +13,7 @@
 		7442B599194BB61900DA5F22 /* scribbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7442B598194BB61900DA5F22 /* scribbleView.m */; };
 		74680B5F195078AF00362ECA /* TextSpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 74680B5E195078AF00362ECA /* TextSpeaker.m */; };
 		74680B6219508FCC00362ECA /* TextRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 74680B6119508FCC00362ECA /* TextRecognizer.m */; };
+		7471074519730D620070882E /* StrokeData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7471074319730D620070882E /* StrokeData.xcdatamodeld */; };
 		74727E071949D07C0070A230 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74727E061949D07C0070A230 /* Foundation.framework */; };
 		74727E091949D07C0070A230 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74727E081949D07C0070A230 /* CoreGraphics.framework */; };
 		74727E0B1949D07C0070A230 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74727E0A1949D07C0070A230 /* UIKit.framework */; };
@@ -62,6 +63,7 @@
 		74680B5E195078AF00362ECA /* TextSpeaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextSpeaker.m; path = ../TextSpeaker.m; sourceTree = "<group>"; };
 		74680B6019508FCC00362ECA /* TextRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextRecognizer.h; sourceTree = "<group>"; };
 		74680B6119508FCC00362ECA /* TextRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextRecognizer.m; sourceTree = "<group>"; };
+		7471074419730D620070882E /* StrokeData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StrokeData.xcdatamodel; sourceTree = "<group>"; };
 		74727E031949D07C0070A230 /* Kanjister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kanjister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74727E061949D07C0070A230 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		74727E081949D07C0070A230 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -313,6 +315,7 @@
 			children = (
 				74680B5C1950731300362ECA /* userdata */,
 				74727E181949D07C0070A230 /* Main_iPhone.storyboard */,
+				7471074319730D620070882E /* StrokeData.xcdatamodeld */,
 				74727E1B1949D07C0070A230 /* Main_iPad.storyboard */,
 				74C308D3195236DC007E1DA8 /* Model */,
 				74727E1E1949D07C0070A230 /* DrawViewController.h */,
@@ -687,6 +690,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74680B5F195078AF00362ECA /* TextSpeaker.m in Sources */,
+				7471074519730D620070882E /* StrokeData.xcdatamodeld in Sources */,
 				74C308D219523621007E1DA8 /* CharacterCollection.m in Sources */,
 				74727E201949D07C0070A230 /* DrawViewController.m in Sources */,
 				7442B599194BB61900DA5F22 /* scribbleView.m in Sources */,
@@ -933,6 +937,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7471074319730D620070882E /* StrokeData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7471074419730D620070882E /* StrokeData.xcdatamodel */,
+			);
+			currentVersion = 7471074419730D620070882E /* StrokeData.xcdatamodel */;
+			path = StrokeData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 74727DFB1949D07C0070A230 /* Project object */;
 }

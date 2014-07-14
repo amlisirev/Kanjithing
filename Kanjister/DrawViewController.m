@@ -30,7 +30,7 @@
     self.mainImage.delegate = self;
     recent_eval=YES;
     speaker = [[TextSpeaker alloc] initWithLanguage:@"ja-JP"];
-    character = [[CharacterCollection alloc] initWithCoder:nil];
+    character = [[CharacterCollection alloc] init];
     [self updateCurrentChar];
 }
 
