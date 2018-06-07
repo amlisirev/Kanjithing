@@ -79,12 +79,12 @@
                 currenttopdown = [StrokeCollection isAbove:item of:[strokepoints objectAtIndex:index-1]];
                 NSUInteger distbetweenstarts = [StrokeCollection distanceBetween:[[strokepoints objectAtIndex:index-1] CGPointValue] and:[[strokepoints objectAtIndex:index-3] CGPointValue]];
                 NSUInteger distbetweenends = [StrokeCollection distanceBetween:[item CGPointValue] and:[[strokepoints objectAtIndex:index-2] CGPointValue]];
-                NSLog(@"%d and %d, true? %d, %d, %d, %d", distbetweenends, distbetweenstarts, lasttopdown, currenttopdown, distbetweenends < brushwidth*FUDGE, distbetweenstarts < brushwidth*FUDGE);
+                NSLog(@"täältä %lu and %lu, true? %d, %d, %d, %d", distbetweenends, distbetweenstarts, lasttopdown, currenttopdown, distbetweenends < brushwidth*FUDGE, distbetweenstarts < brushwidth*FUDGE);
                 if (lasttopdown && currenttopdown && (distbetweenends < brushwidth*FUDGE) && (distbetweenstarts < brushwidth*FUDGE)){daku=TRUE;loop=FALSE;}
             }
-            label = [NSString stringWithFormat:@"%@%d",(loop ? @"L": (daku ? @"D": @"E")), index/2];
+            label = [NSString stringWithFormat:@"%@%lu",(loop ? @"L": (daku ? @"D": @"E")), index/2];
         } else {
-            label = [NSString stringWithFormat:@"S%d", index/2];
+            label = [NSString stringWithFormat:@"S%lu", index/2];
         }
         NSDictionary *dict = @{@"label": label, @"point": item};
         [labeledstrokes addObject:dict];
@@ -125,7 +125,7 @@
     if (array1 == array2) {return true;}
     if (array1.count != array2.count) {return false;}
     for (NSString *item in array1) {
-        uint index = [array1 indexOfObject:item];
+        NSUInteger index = [array1 indexOfObject:item];
         if (![item isEqualToString:array2[index]]) {
             return false;
         }

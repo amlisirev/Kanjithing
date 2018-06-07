@@ -8,7 +8,6 @@
 
 #import "DrawViewController.h"
 #import "TextSpeaker.h"
-#import "TextRecognizer.h"
 #import "CharacterCollection.h"
 #import "StrokeCollection.h"
 
@@ -53,8 +52,8 @@
 -(void)evaluateResult {
     if (recent_eval) return;
     if (self.mainImage.image) {
-        NSString *text = [self translateImage:self.mainImage.image];
-        if ([self isTextMatching:text] && [StrokeCollection compare:character.currentCharStrokeList to:self.mainImage.strokelist]) {
+        NSLog(@"EVALUATING character");
+        if ([StrokeCollection compare:character.currentCharStrokeList to:self.mainImage.strokelist]) {
             self.translatedText.text = @"correct!";
             recent_eval = YES;
             if ([character repetitions] > 2) {
@@ -66,6 +65,8 @@
                 [character upRepetitions];
             }
         } else {
+            NSLog(@"returned as always, try writing again! %@", self.mainImage.strokelist);
+            NSLog(@"%@",character.currentCharStrokeList);
             return;
         }
     }
@@ -78,14 +79,6 @@
     } else {
         return NO;
     }
-}
-
-- (NSString *)translateImage:(UIImage *)image {
-    TextRecognizer *recon = [[TextRecognizer alloc] initWithLanguage:@"jpn"
-                                                    andCharacterList:[character currentCharacter]];
-    NSString *text = [recon recognizeText:image];
-    return text;
-    NSLog(@"%d, %@", text.length, text);
 }
 
 - (IBAction)speakText:(id)sender {

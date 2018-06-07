@@ -41,6 +41,7 @@
         NSURL *soundURL = [NSURL fileURLWithPath:soundpath];
         player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
         [player play];
+        NSLog(@"PLAY SOUND GODDAMN");
     }
 }
 

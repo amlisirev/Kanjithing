@@ -7,7 +7,7 @@
 //
 
 #import "TextRecognizer.h"
-#import "Tesseract.h"
+
 
 @implementation TextRecognizer
 {
